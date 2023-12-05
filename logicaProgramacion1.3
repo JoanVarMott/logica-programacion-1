@@ -1,0 +1,57 @@
+Algoritmo logicaProgramacion1
+// definimos los datos a ingresar por el usuario como dato entero.
+	definir num1,num2,num3 Como Entero
+	
+//	Solicita 3 numeros y los guarda.
+	Escribir "Ingrese el primer número: "
+    Leer num1
+    Escribir "Ingrese el segundo número: "
+    Leer num2
+    Escribir "Ingrese el tercer número: "
+    Leer num3
+// comprobando que el mayor sea el umero 1.
+    Si (num1 > num2) Entonces
+        Si (num1 > num3) Entonces
+            mayor <- num1
+            Si (num2 > num3) Entonces
+                centro <- num2
+                menor <- num3
+            Sino
+                centro <- num3
+                menor <- num2
+            Fin Si
+        Sino
+            mayor <- num3
+            centro <- num1
+            menor <- num2
+        Fin Si
+    Sino
+		// comprobando que el mayor de los numeros es el numero 2.
+        Si (num2 > num3) Entonces
+            mayor <- num2
+            Si num1 > num3 Entonces
+                centro <- num1
+                menor <- num3
+            Sino
+                centro <- num3
+                menor <- num1
+            Fin Si
+		// el numero tres seria el mayor de los numeros si no se cumplen las anteriores condiciones.	
+        Sino
+            mayor <- num3
+            centro <- num2
+            menor <- num1
+        Fin Si
+    Fin Si
+	 // imprimimos en pantalla.
+	Escribir "El número mayor es: ", mayor
+    Escribir "El número del medio es: ", centro
+    Escribir "El número menor es: ", menor
+    Escribir "Los números ordenados de mayor a menor son: ", mayor, ", ", centro, ", ", menor
+    Escribir "Los números ordenados de menor a mayor son: ", menor, ", ", centro, ", ", mayor
+	// si todos los numeros son iguales
+    Si num1 = num2 Y num2 = num3 Entonces
+        Escribir "Los números son iguales."
+    Fin Si
+FinAlgoritmo
+
